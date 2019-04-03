@@ -1,0 +1,64 @@
+{
+  "name": "@doruk/hooks",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist",
+  "module": "src",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "parcel -d build example/index.html",
+    "prebuild": "rimraf dist",
+    "build": "babel src -d dist"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "Doruk Kutlu",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "3",
+    "react-fetch-hook": "^1.3.2",
+    "react-hanger": "^1.1.4",
+    "react-use-form-state": "^0.9.0",
+    "react-use-intersection-observer": "^0.0.0-alpha.1",
+    "react-useportal": "^0.1.17",
+    "use-media": "^1.3.0",
+    "use-onclickoutside": "^0.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "lodash.range": "^3.2.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "sass": "^1.17.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": "last 3 versions",
+          "useBuiltIns": "entry",
+          "corejs": 3
+        }
+      ]
+    ]
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d0ruk/hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/d0ruk/hooks/issues"
+  },
+  "homepage": "https://github.com/d0ruk/hooks#readme",
+  "description": "hooked"
+}
