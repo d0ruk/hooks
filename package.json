@@ -38,6 +38,9 @@
     "rimraf": "^2.6.3",
     "sass": "^1.17.3"
   },
+  "peerDependencies": {
+    "react": ">=16.8.6"
+  },
   "babel": {
     "presets": [
       [
