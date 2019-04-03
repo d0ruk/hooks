@@ -6,7 +6,10 @@ const styles = {
   portal: {
     background: "mistyrose",
     height: "20rem",
-    padding: "1rem",
+    padding: "1rem"
+  },
+  span: {
+    display: "block"
   }
 };
 
@@ -26,7 +29,7 @@ export default () => {
         <Portal>
           <p style={styles.portal}>
             <button onClick={closePortal}>Close me!</button>
-            <div>or hit ESC or click outside of me.</div>
+            <span style={styles.span}>or hit ESC or click outside of me.</span>
           </p>
         </Portal>
       )}

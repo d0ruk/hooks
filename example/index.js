@@ -3,6 +3,7 @@ import { render } from "react-dom";
 
 import "./index.scss";
 import * as hooks from "..";
+import { log } from "./util";
 
 import Hanger from "./hanger";
 import Form from "./form";
@@ -12,7 +13,7 @@ import Portal from "./portal";
 import Intersection from "./intersection";
 import Location from "./location";
 
-console.dir(hooks);
+log.info("lib", hooks);
 
 const App = () => (
   <main>

@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import { isClient, on, off } from "./util";
 
 const patchHistoryMethod = method => {
-  const original = window.history[method];
+  const mtd = method.toLowerCase();
+  const originalFn = window.history[mtd];
 
-  window.history[method] = function(state) {
-    const result = original.apply(this, arguments);
-    const event = new Event(method.toLowerCase());
+  window.history[mtd] = function(state) {
+    const result = originalFn.apply(this, arguments);
+    const event = new Event();
 
     event.state = state;
-
     window.dispatchEvent(event);
 
     return result;

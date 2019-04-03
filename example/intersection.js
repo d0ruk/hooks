@@ -17,8 +17,8 @@ const Box = idx => {
       ref={ref}
       style={{
         background: getBackgroundColor(intersections),
-        padding: "0.5rem",
-        margin: "0.2rem",
+        padding: "0.3rem",
+        margin: "0.3rem",
         color: "white",
         fontSize: "1.5rem"
       }}
@@ -30,9 +30,11 @@ const Box = idx => {
 
 export default () => (
   <section
+    id="xsection"
     style={{
       display: "flex",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
+      maxWidth: "40rem"
     }}
   >
     {range(50).map(Box)}

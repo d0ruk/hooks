@@ -1,6 +1,12 @@
 main {
   > section {
     margin: 2rem 0.5rem;
+
+    &#xsection {
+      > span:last-child {
+        flex-grow: 1;
+      }
+    }
   }
 }
 

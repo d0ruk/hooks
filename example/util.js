@@ -1,8 +1,8 @@
 export const log = {
   info: (text, ...rest) =>
-    console.log(`%c${text}`, "font-size: 1.5rem;color: blue;", ...rest),
+    console.log(`%c${text}`, "font-size: 1.2rem;color: blue;", ...rest),
   ok: (text, ...rest) =>
-    console.log(`%c${text}`, "font-size: 1.5rem;color: green;", ...rest),
+    console.log(`%c${text}`, "font-size: 1.2rem;color: green;", ...rest),
   error: (text, ...rest) =>
-    console.log(`%c${text}`, "font-size: 1.5rem;color: red;", ...rest)
+    console.log(`%c${text}`, "font-size: 1.2rem;color: red;", ...rest)
 };
