@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "start": "parcel -d build example/index.html",
     "prebuild": "rimraf dist",
-    "build": "babel src -d dist"
+    "build": "babel src -sd dist"
   },
   "keywords": [
     "react",
@@ -30,6 +30,7 @@
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
+    "babel-preset-minify": "^0.5.0",
     "lodash.range": "^3.2.0",
     "parcel-bundler": "^1.12.3",
     "react": "^16.8.6",
@@ -46,7 +47,8 @@
           "useBuiltIns": "entry",
           "corejs": 3
         }
-      ]
+      ],
+      "minify"
     ]
   },
   "directories": {
