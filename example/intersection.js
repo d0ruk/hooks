@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import range from "lodash.range";
+import { range } from "lodash";
 
 import { useIntersectionObserver } from "..";
 

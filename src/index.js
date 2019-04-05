@@ -2,7 +2,6 @@ export * from "react-hanger";
 export * from "react-use-form-state";
 export * from "react-fetch-hook";
 export * from "use-media";
-export * from "react-useportal";
 export * from "use-onclickoutside";
 export {
   default as useIntersectionObserver
