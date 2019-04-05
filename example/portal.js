@@ -4,6 +4,13 @@ import { usePortal } from "..";
 
 const styles = {
   portal: {
+    // backgroundColor: "rgba(0,0,0,.2)",
+    // position: "absolute",
+    // width: "100vw",
+    // height: "70vh",
+    // top: 0
+  },
+  container: {
     background: "mistyrose",
     height: "20rem",
     padding: "1rem"
@@ -14,23 +21,21 @@ const styles = {
 };
 
 export default () => {
-  const { openPortal, closePortal, togglePortal, isOpen, Portal } = usePortal({
-    closeOnOutsideClick: true,
-    closeOnEsc: true,
-    renderBelowClickedElement: true, // appear directly under the clicked element/node in the DOM
-    bindTo: document.body,
-    isOpen: false
+  const { open: openPortal, close: closePortal, isOpen, Portal } = usePortal({
+    // renderBelow: true,
+    mount: "#portal", // "#xsection"
+    // isOpen: true,
   });
 
   return (
     <section>
       <button onClick={openPortal}>Open Portal</button>
       {isOpen && (
-        <Portal>
-          <p style={styles.portal}>
+        <Portal style={styles.portal}>
+          <div style={styles.container}>
             <button onClick={closePortal}>Close me!</button>
             <span style={styles.span}>or hit ESC or click outside of me.</span>
-          </p>
+          </div>
         </Portal>
       )}
     </section>

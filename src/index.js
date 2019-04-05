@@ -7,3 +7,4 @@ export {
   default as useIntersectionObserver
 } from "react-use-intersection-observer";
 export { default as useLocation } from "./use-location"
+export { default as usePortal } from "./use-portal"

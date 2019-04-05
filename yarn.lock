@@ -4910,6 +4910,11 @@ scheduler@^0.13.6:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+select-dom@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/select-dom/-/select-dom-5.0.1.tgz#aae86714c5bc7e0644cb24c32a536a998f9e55a1"
+  integrity sha512-cpNrVqu6spg6B7bA5J8latFzHOXWh2UWYrVheemrnEfJQduUXmoVZZtgRiWTOe/axNoWsRODJ1otgy2f7Vol7g==
+
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz#790a7cf6fea5459bac96110b29b60412dc8ff96b"
