@@ -1,7 +1,6 @@
 {
   "name": "@doruk/hooks",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
   "main": "dist",
   "module": "src",
   "scripts": {
@@ -42,7 +41,8 @@
     "sass": "^1.17.3"
   },
   "peerDependencies": {
-    "react": ">=16.8.6"
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
   },
   "babel": {
     "presets": [
