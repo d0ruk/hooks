@@ -40,16 +40,14 @@ export default config => {
     };
   }, [toMount]);
 
-  const open = ({ target, nativeEvent }) => {
+  const open = ({ nativeEvent, pageX, pageY }) => {
     if (nativeEvent) nativeEvent.stopImmediatePropagation();
+
     if (renderBelow) {
-      const res = target.getBoundingClientRect();
-      console.log("bounds", res)
-      const  { left, top, height } = res
       const style = {
         position: "absolute",
-        left: left + "px",
-        top: top + height + "px"
+        left: pageX + "px",
+        top: pageY + "px"
       };
 
       setStyles(portal.current, style);
@@ -58,12 +56,15 @@ export default config => {
     portal.current.style.visibility = "visible";
     setIsOpen(true);
   };
+
   const close = () => {
     portal.current.style.visibility = "hidden";
     setIsOpen(false);
   };
+
   const handleKeyDown = ({ keyCode }) =>
     closeOnEsc && keyCode === ESC && close();
+
   const handleOnClick = ({ target, button }) => {
     if (closeOnClick) {
       if (portal.current.contains(target) || button !== 0) return;
