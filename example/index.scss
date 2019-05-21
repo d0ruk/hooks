@@ -14,3 +14,28 @@ hr {
   height: 0.1rem;
   background-color: grey;
 }
+
+#hanger {
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    margin: 0 3rem;
+  }
+
+  :first-child {
+    margin-left: 0;
+  }
+
+  p {
+    max-width: 50ch;
+  }
+}
+
+
+#counter {
+  > * {
+    margin: 0 0.3rem;
+    display: inline-block;
+  }
+}

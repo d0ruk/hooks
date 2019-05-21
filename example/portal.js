@@ -3,17 +3,17 @@ import React from "react";
 import { usePortal } from "..";
 
 const styles = {
-  portal: {
-    // backgroundColor: "rgba(0,0,0,.2)",
-    // position: "absolute",
-    // width: "100vw",
-    // height: "70vh",
-    // top: 0
-  },
   container: {
     background: "mistyrose",
-    height: "20rem",
-    padding: "1rem"
+    padding: "1rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    // position: "fixed",
+    // height: "100vh",
+    // width: "80%",
+    // top: 0,
+    // left: 0,
   },
   span: {
     display: "block"
@@ -22,16 +22,16 @@ const styles = {
 
 export default () => {
   const { open: openPortal, close: closePortal, isOpen, Portal } = usePortal({
-    // renderBelow: true,
+    renderBelow: true,
     mount: "#portal", // "#xsection"
     // isOpen: true,
   });
 
   return (
     <section>
-      <button onClick={openPortal}>Open Portal</button>
+      <button onClick={openPortal}>usePortal</button>
       {isOpen && (
-        <Portal style={styles.portal}>
+        <Portal>
           <div style={styles.container}>
             <button onClick={closePortal}>Close me!</button>
             <span style={styles.span}>or hit ESC or click outside of me.</span>
