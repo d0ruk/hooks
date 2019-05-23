@@ -5,12 +5,12 @@
   "module": "src",
   "scripts": {
     "prestart": "npm run build",
-    "start": "parcel serve example/index.html",
+    "start": "parcel serve -d build example/index.html",
     "prebuild": "rimraf dist",
     "build": "babel src -sd dist",
     "licenses": "npm run check -- --summary > LICENSES & npm run check -- --csv --exclude 'MIT,ISC,BSD' >> LICENSES",
     "check": "license-checker --production --unknown",
-    "prepublish": "npm run licenses"
+    "prepare": "npm run licenses"
   },
   "keywords": [
     "react",
